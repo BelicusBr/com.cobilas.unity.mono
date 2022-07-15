@@ -1,0 +1,20 @@
+{
+    "name": "Cobilas.Unity.Editor.Mono",
+    "references": [
+        "Cobilas.Unity.Mono",
+        "Cobilas.Unity.Editor.Extensions"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_EDITOR"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

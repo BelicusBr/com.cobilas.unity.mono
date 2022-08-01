@@ -1,6 +1,48 @@
 # Changelog
+## [1.0.6] 01/08/2022
+- Fix CHANGELOG.md
+- Fix package.json
+### Change CobilasBehaviour.cs
+#### Métodos adicionados
+- > `void:SetPosition(Vector3);`
+- > `void:SetPosition(Vector2);`
+- > `void:SetPosition(float, float);`
+- > `void:SetPosition(float, float, float);`
+- > `void:SetLocalPosition(Vector3);`
+- > `void:SetLocalPosition(Vector2);`
+- > `void:SetLocalPosition(float, float);`
+- > `void:SetLocalPosition(float, float, float);`
+- > `Vector3:GetPosition();`
+- > `Vector3:GetLocalPosition();`
+- >
+- > `void:SetEulerAngles(Vector3);`
+- > `void:SetEulerAngles(Vector2);`
+- > `void:SetEulerAngles(float, float);`
+- > `void:SetEulerAngles(float, float, float);`
+- > `void:SetLocalEulerAngles(Vector3);`
+- > `void:SetLocalEulerAngles(Vector2);`
+- > `void:SetLocalEulerAngles(float, float);`
+- > `void:SetLocalEulerAngles(float, float, float);`
+- > `Vector3:GetEulerAngles();`
+- > `Vector3:GetLocalEulerAngles();`
+- >
+- > `void:LocalScale(Vector3);`
+- > `void:LocalScale(Vector2);`
+- > `void:LocalScale(float, float);`
+- > `void:LocalScale(float, float, float);`
+- > `Vector3:GetLossyScale();`
+- > `Vector3:GetLocalScale();`
+- >
+- > `void:SetRotation(Quaternion);`
+- > `void:SetRotation(Vector4);`
+- > `void:SetRotation(float, float, float, float);`
+- > `void:SetLocalRotation(Quaternion);`
+- > `void:SetLocalRotation(Vector4);`
+- > `void:SetLocalRotation(float, float, float, float);`
+- > `Quaternion:GetRotation();`
+- > `Quaternion:GetLocalRotation();`
 ## [1.0.5] 31/07/2022
-- Add CHANGELOG.md
+- Fix CHANGELOG.md
 - Fix package.json
 - Add Cobilas Mono.asset
 - Remove Runtime\DependencyWarning.cs

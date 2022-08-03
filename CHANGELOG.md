@@ -1,4 +1,11 @@
 # Changelog
+## [1.0.7] 01/08/2022
+- Fix CHANGELOG.md
+- Fix package.json
+### Change CobilasBehaviour.cs
+#### Métodos adicionados
+- > `public static GameObject FindObjectByName(string);`
+- > `public static T FindObjectByName<T>(string) where T : UEObject;`
 ## [1.0.6] 01/08/2022
 - Fix CHANGELOG.md
 - Fix package.json

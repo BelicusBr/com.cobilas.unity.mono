@@ -82,6 +82,15 @@ namespace Cobilas.Unity.Mono {
         public Quaternion GetLocalRotation() => transform.localRotation;
         #endregion
 
+        public void Destroy(UEObject[] OBJ)
+            => gameObject.Destroy(OBJ);
+
+        public void Destroy()
+            => Destroy(gameObject);
+
+        public void Destroy<T>() where T : UEObject
+            => Destroy(gameObject.GetComponent<T>());
+
         public static new void print(object OBJ = null)
             => MonoBehaviour.print(OBJ == null ? "Empty!!!" : OBJ);
 
@@ -103,17 +112,32 @@ namespace Cobilas.Unity.Mono {
 
         public static void ClearLog() {
 #if UNITY_EDITOR
-            try
-            {
+            try {
                 Assembly assembly = Assembly.GetAssembly(typeof(UnityEditor.Editor));
                 Type type = assembly.GetType("UnityEditor.LogEntries");
                 MethodInfo method = type.GetMethod("Clear");
-                method.Invoke(new object(), null);
+                _ = method.Invoke((object)null, (object[])null);
             } catch (Exception E) {
                 Debug.LogError($"O metodo não e compativel com a versão:{Application.unityVersion} da unity.\n" +
                     $"{E}");
             }
 #endif
+        }
+
+        public static GameObject FindObjectByName(string name) {
+            GameObject[] temp = FindObjectsOfType<GameObject>();
+            for (int I = 0; I < ArrayManipulation.ArrayLength(temp); I++)
+                if (temp[I].name == name)
+                    return temp[I];
+            return (GameObject)null;
+        }
+
+        public static T FindObjectByName<T>(string name) where T : UEObject {
+            T[] temp = FindObjectsOfType<T>();
+            for (int I = 0; I < ArrayManipulation.ArrayLength(temp); I++)
+                if (temp[I].name == name)
+                    return temp[I];
+            return (T)null;
         }
 
         public static new void Destroy(UEObject OBJ) 
@@ -122,19 +146,10 @@ namespace Cobilas.Unity.Mono {
         public static new void Destroy(UEObject OBJ, float T)
             => UEObject.Destroy(OBJ, T);
 
-        public void Destroy(UEObject[] OBJ)
-            => gameObject.Destroy(OBJ);
-
-        public void Destroy()
-            => Destroy(gameObject);
-
-        public void Destroy<T>() where T : UEObject
-            => Destroy(gameObject.GetComponent<T>());
-
         public static GameObject CreatePrimitive(PrimitiveType type)
             => GameObject.CreatePrimitive(type);
 
         public static GameObject CreatePrimitive()
-            => new GameObject("GameObject");
+            => new GameObject("GameObject Empty");
     }
 }

@@ -1,6 +1,6 @@
 {
   "name": "com.cobilas.unity.mono",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "displayName": "Cobilas Mono",
   "description": "Pacote de scripts MonoBehaviour para unity3d",
   "licensesUrl": "https://github.com/BelicusBr/com.cobilas.unity.mono/blob/main/LICENSE.md",
@@ -8,17 +8,14 @@
   "unity": "2019.1",
   "unityRelease": "0b5",
   "type": "library",
-  
   "author": {
     "name": "Cobilas CTB"
   },
-
   "repository": {
-    "url" : "https://github.com/BelicusBr/com.cobilas.unity.mono.git",
-    "type" : "git"
+    "url": "https://github.com/BelicusBr/com.cobilas.unity.mono.git",
+    "type": "git"
   },
-
   "relatedPackages": {
-    "com.cobilas.unity.mono": "1.0.6"
+    "com.cobilas.unity.mono": "1.0.7"
   }
 }

@@ -15,12 +15,6 @@
     "defineConstraints": [
         "UNITY_EDITOR"
     ],
-    "versionDefines": [
-        {
-            "name": "com.cobilas.unity.extensions",
-            "expression": "1.0",
-            "define": "COBILAS_EXTENSIONS"
-        }
-    ],
+    "versionDefines": [],
     "noEngineReferences": false
 }

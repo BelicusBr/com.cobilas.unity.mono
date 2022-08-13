@@ -1,4 +1,7 @@
 # Changelog
+## [1.0.8] 13/08/2022
+- Change Editor\Cobilas.Unity.Editor.Mono.asmdef
+- Change Runtime\Cobilas.Unity.Mono.asmdef
 ## [1.0.7] 01/08/2022
 - Fix CHANGELOG.md
 - Fix package.json

@@ -1,6 +1,6 @@
 {
   "name": "com.cobilas.unity.mono",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "displayName": "Cobilas Mono",
   "description": "Pacote de scripts MonoBehaviour para unity3d",
   "licensesUrl": "https://github.com/BelicusBr/com.cobilas.unity.mono/blob/main/LICENSE.md",

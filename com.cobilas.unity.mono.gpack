@@ -1,9 +1,10 @@
 {
     "name": "com.cobilas.unity.mono",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "repository": "https://github.com/BelicusBr/com.cobilas.unity.mono.git",
     "relatedPackages": [
-        "1.0.8"
+        "1.0.8",
+		"1.0.9"
     ],
     "gitDependencies": [
         {

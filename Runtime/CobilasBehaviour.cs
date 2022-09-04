@@ -8,26 +8,10 @@ namespace Cobilas.Unity.Mono {
     public class CobilasBehaviour : MonoBehaviour {
         public Transform parent { get => transform.parent; set => transform.parent = value; }
 
-        public CobilasBehaviour() : base() { }
-
         public static new void print(object OBJ = null)
             => MonoBehaviour.print(OBJ == null ? "Empty!!!" : OBJ);
 
-        /// <param name="showIndex">Mostrar os indices dos itens.</param>
-        /// <param name="fromZero">Mostrar o indice a partir de zero.</param>
-        public static void prints(object[] obj, bool showIndex = false, bool fromZero = true) {
-            for (int I = 0; I < ArrayManipulation.ArrayLength(obj); I++)
-                print(showIndex ? $"Index: {I + (fromZero ? 0 : 1)} Item: {obj[I]}" : obj[I]);
-        }
-
-        public static void printChar(char obj) => print(obj.EscapeSequenceToString());
-
-        /// <param name="showIndex">Mostrar os indices dos itens.</param>
-        /// <param name="fromZero">Mostrar o indice a partir de zero.</param>
-        public static void printChars(char[] obj, bool showIndex = false, bool fromZero = true) {
-            for (int I = 0; I < obj.Length; I++)
-                print(showIndex ? $"Index: {I + (fromZero ? 0 : 1)} Char: {obj[I].EscapeSequenceToString()}" : obj[I].EscapeSequenceToString());
-        }
+        public static void print(char obj) => print((object)obj.EscapeSequenceToString());
 
         public static void ClearLog() {
 #if UNITY_EDITOR

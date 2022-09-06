@@ -6,12 +6,14 @@ namespace Cobilas.Unity.Mono {
     /// <summary>Cobilas Garbage Collector.</summary>
     public class GarbageCollector : CobilasBehaviour, ISerializationCallbackReceiver {
 
-        private bool printLog;
         [SerializeField, Range(10f, 1500f)]
         private int collectionInterval = 30;
         private Coroutine coroutine;
         private bool AfterDeserialize;
         private static GarbageCollector garbage;
+#if UNITY_EDITOR
+        [SerializeField] private bool printLog;
+#endif
 
         private void Awake() {
             if (garbage != null) {

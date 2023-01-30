@@ -8,7 +8,6 @@ namespace Cobilas.Unity.Mono {
 
         [SerializeField, Range(10f, 1500f)]
         private int collectionInterval = 30;
-        private Coroutine coroutine;
         private bool AfterDeserialize;
         private static GarbageCollector garbage;
 #if UNITY_EDITOR
@@ -29,7 +28,7 @@ namespace Cobilas.Unity.Mono {
         private void OnEnable() {
             if (!AfterDeserialize) return;
             AfterDeserialize = false;
-            coroutine = StartCoroutine(Collect());
+            _ = StartCoroutine(Collect());
             garbage = garbage == null ? FindObjectOfType<GarbageCollector>() : garbage;
         }
 

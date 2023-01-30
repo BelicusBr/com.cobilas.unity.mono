@@ -9,7 +9,7 @@ namespace Cobilas.Unity.Mono {
         public Transform parent { get => transform.parent; set => transform.parent = value; }
 
         public static new void print(object OBJ = null)
-            => MonoBehaviour.print(OBJ == null ? "Empty!!!" : OBJ);
+            => MonoBehaviour.print(OBJ ?? "Empty!!!");
 
         public static void print(char obj) => print((object)obj.EscapeSequenceToString());
 

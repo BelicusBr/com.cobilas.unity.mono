@@ -1,4 +1,9 @@
 # Changelog
+## [1.0.13] - 30/01/2023
+### Changed
+- Simplificação de operações logicas.
+- Remoção de atribuições desnecessárias.
+- Transformando possiveis campos em `readonly`.
 ## [1.0.9] 27/08/2022
 ### Rename
 - Runtime\CobilasGC.cs > Runtime\GarbageCollector.cs

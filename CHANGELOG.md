@@ -1,4 +1,7 @@
 # Changelog
+## [1.14.0] - 16/03/2023
+### Fixed
+O pacote teve seu tipo alterado de 'module' para 'library'.
 ## [1.0.13] - 30/01/2023
 ### Changed
 - Simplificação de operações logicas.
